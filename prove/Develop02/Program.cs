@@ -67,7 +67,7 @@ Select one of these numbers
 
                 foreach (string line in lines)
                 {
-                    string[] parts = line.Split(",");
+                    string[] parts = line.Split(" - ");
 
                     string prompt = parts[0];
                     string answer = parts[1];
