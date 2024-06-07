@@ -6,14 +6,18 @@ public class ScripReference{
     private int _lastVerse;
     private int _chapter;
 
-    public void DisplayRef(){
-        Console.WriteLine(_book, _chapter, _firstVerse, _lastVerse );
-    }
-    public ScripReference(string book, int firstVerse, int lastVers, int chapter){
+   
+// 1 Nephi 1:2-3
+    public ScripReference(string book, int chapter, int firstVerse, int lastVers )
+    {
         _book = book;
         _firstVerse = firstVerse;
-        _lastVerse = lastVers;
+        _lastVerse = lastVers ;
         _chapter = chapter; 
 
+    }
+     public void DisplayRef()
+    {
+        Console.WriteLine($"{_book} {_chapter}:{_firstVerse}-{_lastVerse}");
     }
 }

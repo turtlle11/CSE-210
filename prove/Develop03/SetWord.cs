@@ -1,45 +1,35 @@
 using System;
 
-public class SetWord{
+public class SetWord
+{
+    private string _word;
+    private bool _isHidden;
 
-
-private string _word;
-private bool _isHidden;
-
-//Content scripture = new Content(object.GetScrip);
-
-// private string[] words = {};
-// public void SeparateScrip(){
-//     foreach( string word in scrip){
-//           string[] wor = line.Split(",");
-
-//     }
-// }
-public SetWord(string word, bool isHidden){
-    _word = word;
-    _isHidden = isHidden;
-}
-// public void Word(){
-
-// }
-// public void HideWord(){
-
-// }
-// public void ChooseWord(){
-
-// }
-public void SetHidden(){
-    string letter = "";
-    foreach(char i in _word){
-        letter = letter + "_";
-
+    public SetWord(string word, bool isHidden){
+        _word = word;
+        _isHidden = isHidden;
     }
-    _word = letter;
-    _isHidden = true;
-}
-public string GetWord(){
-    return _word;
-}
 
+    public void SetHidden()
+    {
+
+        string hidden_word = "";
+        foreach(char letter in _word){
+            hidden_word = hidden_word + "_";
+
+        }
+        _word = hidden_word;
+        _isHidden = true;
+    }
+
+    public string GetWord()
+    {
+        return _word;
+    }
+
+    public bool GetHiddenStatus()
+    {
+        return _isHidden;
+    }
 
 }
