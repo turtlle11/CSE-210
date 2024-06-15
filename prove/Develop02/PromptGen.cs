@@ -14,6 +14,5 @@ public class PromptGen{
             int index = randomGenerator.Next(0,5);
             string prompt = questions[index];
             return prompt;
-
         }
 }
