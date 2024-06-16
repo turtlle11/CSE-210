@@ -7,7 +7,7 @@ class Program
     {
 
         string choice = "0";
-        Console.WriteLine("Choose activity:\n1.Reflection Activity\n2.Breathing Activity\n3.Listing Activity\n4.End program.");
+        Console.WriteLine("Choose activity:\n1.Reflection Activity\n2.Breathing Activity\n3.Listing Activity\n4.Meditation Activity.\n0.End program.");
         choice = Console.ReadLine();
         while (choice != "0")
         {
@@ -19,7 +19,7 @@ class Program
                 reflection.Display_End_Message("Reflection");
                 reflection.Anomation(10);
                 Console.Clear();
-                Console.WriteLine("Choose activity:\n1.Reflection Activity\n2.Breathing Activity\n3.Listing Activity");
+                Console.WriteLine("Choose activity:\n1.Reflection Activity\n2.Breathing Activity\n3.Listing Activity\n4.Meditation Activity.\n0.End program.");
                 choice = Console.ReadLine();
                 
                 
@@ -31,7 +31,7 @@ class Program
                 breath.Display_End_Message("Breathing");
                 breath.Anomation(10);
                 Console.Clear();
-                Console.WriteLine("Choose activity:\n1.Reflection Activity\n2.Breathing Activity\n3.Listing Activity");
+                Console.WriteLine("Choose activity:\n1.Reflection Activity\n2.Breathing Activity\n3.Listing Activity\n4.Meditation Activity.\n0.End program.");
                 choice = Console.ReadLine();
                 
             }
@@ -42,15 +42,24 @@ class Program
                 list.Display_End_Message("Listing");
                 list.Anomation(10);
                 Console.Clear();
-                Console.WriteLine("Choose activity:\n1.Reflection Activity\n2.Breathing Activity\n3.Listing Activity");
+                Console.WriteLine("Choose activity:\n1.Reflection Activity\n2.Breathing Activity\n3.Listing Activity\n4.Meditation Activity.\n0.End program.");
                 choice = Console.ReadLine();
                 
             }
-            
+            if (choice == "4")
+            {
+                Meditation mind = new Meditation("Meditation","This activity will help you relax and clear your mind. Try to find a comforteble position and put away all your problems for 15 minuts.",0);
+                mind.Display_Meditation_Activity();
+                mind.Display_End_Message("Meditation");
+                mind.Anomation(10);
+                Console.Clear();
+                Console.WriteLine("Choose activity:\n1.Reflection Activity\n2.Breathing Activity\n3.Listing Activity\n4.Meditation Activity.\n0.End program.");
+                choice = Console.ReadLine();
+            }
             if (choice == "0")
             Console.WriteLine("Have a good day!");
         }
-            Console.WriteLine("Choose activity:\n1.Reflection Activity\n2.Breathing Activity\n3.Listing Activity");
-            choice = Console.ReadLine();
+            // Console.WriteLine("Choose activity:\n1.Reflection Activity\n2.Breathing Activity\n3.Listing Activity\n4.Meditation Activity.\n0.End program.");
+            // choice = Console.ReadLine();
     }
 }

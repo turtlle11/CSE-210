@@ -1,7 +1,7 @@
-using System.Media;
+
 class Breathing: Activity
 {
-    // Time time = new Time();
+
     public Breathing(string title, string description, int duration):base(title, description, duration)
     {
         _title = title;
@@ -16,18 +16,12 @@ class Breathing: Activity
         Console.Write("Get ready");
         Anomation(6);
         
-
         while (_time.Timer_Still_Counting())
         {
             Console.Write("\nBreath in");
             Anomation(repitition);
             Console.Write("\nBreath out");
             Anomation(repitition);
-            // SystemSounds.Beep.Play();
-            
         }
-
     }
-
-    
 }

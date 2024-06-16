@@ -36,9 +36,8 @@ class Activity
 
     public void Anomation(int repitition)
     {
-        // if(_time.Timer_Still_Counting())
-        // {
-            for(int i = 0; i<repitition; i++){
+            for(int i = 0; i<repitition; i++)
+            {
             foreach(string frame in new List<string>(){"|","\\","-","/","|","\\","-","/"})
             {
                 Console.Write(frame);
@@ -46,7 +45,6 @@ class Activity
                 Console.Write("\b \b"); 
             }
             }
-        // }
        
     }
 }

@@ -26,11 +26,9 @@ class Time
     }
     public bool Timer_Still_Counting()
     {
-        // Thread.Sleep(3000);
         DateTime currentTime = DateTime.Now;
         if (currentTime < _futureTime)
         {
-            // Console.WriteLine("We have not arrived at our future time yet...");
             return true;
         }
         else
@@ -38,11 +36,4 @@ class Time
             return false;
         }
     }
-
-    // public bool Pause()
-    // {
-    //     Thread.Sleep(8000);
-    //     return true;
-    // }
-
 }
