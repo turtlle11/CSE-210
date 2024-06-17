@@ -20,11 +20,7 @@ class Meditation: Activity
 
         while (_time.Timer_Still_Counting()==true)
         {
-            if (_time.Timer_Still_Counting()==false)
-            {
-                break;
-            }
-            Anomation(10000);
+            Anomation(1);
         }
         Console.Beep();
 
