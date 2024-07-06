@@ -1,0 +1,5 @@
+204
+Simple - [X]: t: t: 30
+Eternal - w: w: 10
+Simple - [X]: r: r: 30
+Checklist - [X]: q: q: 12: 2: 2: 100
