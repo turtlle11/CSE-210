@@ -4,6 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Foundation2 World!");
+        Address address = new Address("North", "Salt", "Utah", "USA");
+        Console.WriteLine(address.Get_Full_Address());
     }
 }

@@ -3,14 +3,16 @@ class Video
     private string _video_title;
     private string _author;
     private string _length_of_video;
-    private List<string> _comments = new List<string>();
+    private List<Comments> _comments;
 
-    public Video(string title, string author, string length, List<string> comments)
+
+    public Video(string title, string author, string length)
     {
         _video_title = title;
         _author = author;
         _length_of_video = length;
-        _comments = comments;
+        _comments = new List<Comments>();
+
     }
 
     public string Get_Author()
@@ -25,30 +27,33 @@ class Video
     {
         return _video_title;
     }
-    public List<string> Get_Comments()
+    public List<Comments> Get_Comments()
     {
         return _comments;
     }
-    public int Number_of_points()
-    {
-        int number_of_points = 0;
-        for (int i = 0; i < _comments.Count; i++)
-        {
-            number_of_points = i;
-        }
 
-        return number_of_points;
-    }
 
     public void Display_All()
     {
-        Console.WriteLine($"{_video_title}");
-        Console.WriteLine($"{_author}");
-        Console.WriteLine($"{_length_of_video}");
-        foreach(string comment in _comments)
+        Console.WriteLine($"Title of the video: {_video_title}");
+        Console.WriteLine($"Author's name: {_author}");
+        Console.WriteLine($"Length of the video: {_length_of_video}\n");
+        Console.WriteLine("Comments:");
+        foreach( Comments particle in _comments)
         {
-            Console.WriteLine($"{comment}");
+            Console.WriteLine($"{particle.Display_one_comment()}");
         }
+        Console.WriteLine($"Number of comments: {Number_of_comments()}\n");
         
+    }
+    public int Number_of_comments()
+    {
+        int number_of_comments = 0;
+        for (int i = 0; i <= _comments.Count; i++)
+        {
+            number_of_comments = i;
+        }
+
+        return number_of_comments;
     }
 }
