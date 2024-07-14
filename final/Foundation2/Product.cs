@@ -1,6 +1,5 @@
 class Product
 {
-    // Contains the name, product id, price per unit, and quantity of each product.
     private string _name_of_product;
     private string _droduct_ID;
     private int _price_per_unit;
