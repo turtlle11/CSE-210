@@ -23,4 +23,8 @@ class Order
         }
     }
 
+    public string Display_Shipping_Label()
+    {
+        return $"Customer name: {new_costomer.Get_Name()}\nCustomer address: {new_costomer.Get_Address()}";
+    }
 }
