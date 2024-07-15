@@ -26,7 +26,7 @@ class Program
         Console.WriteLine("\nPackeging label:");
         order_2.Display_Packiging_Lable();
 
-        Console.WriteLine("\nhipping label:");
+        Console.WriteLine("\nShipping label:");
         Console.WriteLine(order_2.Display_Shipping_Label());
         order_2.Display_Total_Price();
     }
