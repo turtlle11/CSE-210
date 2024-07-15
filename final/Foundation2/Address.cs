@@ -14,8 +14,21 @@ class Address
     }
     public bool Is_Local()
     {
-        return true;
+        if(_country=="USA")
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
     }
+
+    // public bool Is_Local()
+    // {
+    //     return true;
+    // }
     public string Get_Full_Address()
     {
 

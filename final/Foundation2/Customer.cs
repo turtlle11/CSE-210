@@ -11,7 +11,15 @@ class Customer
     
     public bool Is_Local()
     {
-        return true;
+        if(_address.Is_Local() is true)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
     }
     public string Get_Name()
     {
