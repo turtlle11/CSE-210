@@ -3,9 +3,9 @@ class Customer
     private string _customer_name;
     private Address _address;
 
-    public Customer(string name)
+    public Customer(string name, Address address)
     {
-        _address = new Address("","","","");
+        _address = address;
         _customer_name = name;
     }
     

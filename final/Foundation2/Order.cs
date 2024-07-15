@@ -1,17 +1,26 @@
 class Order
 {
     private Customer new_costomer;
-    private List<Product> _order;
+    private List<Product> _list_of_products;
 
-    public Order()
+    public Order(Customer customer)
     {
-          new_costomer = new Customer("");
-          _order = new List<Product>();
+        new_costomer = customer;
+        _list_of_products = new List<Product>();
     }
 
     public List<Product> Add_New_Product(Product new_product)
     {
-        _order.Add(new_product);
-        return _order;
+        _list_of_products.Add(new_product);
+        return _list_of_products;
     }
+
+    public void Display_Packiging_Lable()
+    {
+        foreach (Product product in _list_of_products)
+        {
+            Console.WriteLine(product.Product_Display());
+        }
+    }
+
 }
