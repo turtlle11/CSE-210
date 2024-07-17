@@ -25,7 +25,7 @@ class Order
 
     public string Display_Shipping_Label()
     {
-        return $"Customer name: {new_customer.Get_Name()}\nCustomer address: {new_customer.Get_Address()}";
+        return $"Customer name: {new_customer.Get_Name()}\nCustomer address: {new_customer.Get_Address().Get_Full_Address()}";
     }
     public void Display_Total_Price()
     {
@@ -40,7 +40,7 @@ class Order
             total_price += 5;
             Console.WriteLine($"Price for your order: {total_price}");
         }
-        else
+        else 
         {
             total_price += 35;
             Console.WriteLine($"Price for your order: {total_price}");
